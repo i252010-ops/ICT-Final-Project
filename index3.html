@@ -12,100 +12,118 @@
     <img src="images/logo.png" class="cart-logo" alt="Cart Icon">
     <div class="logo">GoCrick</div>
     <a href="index.html">Home</a>
-    <a href="index3.html">Products</a>
-    <a href="index8.html">About</a>
-    <a href="index9.html">Contact Us</a>
+    <div class="dropdown">
+        <button class="dropbtn">
+           <a href="index3.html">Products</a> <a class="arrow">v</a>
+        </button>
+
+        <div class="dropdown-content">
+            <div class="item">Bats <a class="arrow">v</a></div>
+            <div class="item">Balls <a class="arrow">v</a></div>
+            <div class="item">Apparels <a class="arrow">v</a></div>
+            <div class="item">Training Kits <a class="arrow">v</a></div>
+            <div class="item">Accessories <a class="arrow">v</a></div>
+        </div>
+    </div>
+    <a href="index6.html">About</a>
+    <a href="index7.html">Contact Us</a>
     <a href="index2.html" class="login-btn">Log In</a>
     <img src="images/cart.png" class="cart" alt="Cart Icon">
-
 </div>
 
 <h2>GoCrick Products</h2>
 
-    <div class="row">
+<div class="sort-container">
+    <div class="sort-title">
+        Sort by <span class="arrow">v</span>
+    </div>
 
-        <!-- Product 1 -->
+    <div class="sort-dropdown">
+        <div class="sort-item high">
+
+            <img src="images/low.png" class="icon"> Price high to low
+        </div>
+
+        <div class="sort-item low">
+            <img src="images/high.png" class="icon"> Price low to high
+        </div>
+    </div>
+</div>
+
+
+<div id="product-container">
+
+    <div class="row">
         <div class="card">
             <img src="images/helmet.png" class="product-img">
             <p class="stock">In Stock</p>
             <p class="stars">*****</p>
             <h3>Helmet</h3>
-            <p class="price">RS 7000</p>
+            <p class="price" data-price="7000">RS 7000</p>
         </div>
-
-        <!-- Product 2 -->
         <div class="card">
             <img src="images/ball.png" class="product-img">
             <p class="stock">In Stock</p>
             <p class="stars">*****</p>
             <h3>Red Ball</h3>
-            <p class="price">RS 5000</p>
+            <p class="price" data-price="5000">RS 5000</p>
         </div>
     </div>
 
     <div class="row">
-        <!-- Product 3 -->
         <div class="card">
             <img src="images/bat.png" class="product-img">
             <p class="stock">In Stock</p>
             <p class="stars">*****</p>
             <h3>CA Bat</h3>
-            <p class="price">RS 7000</p>
+            <p class="price" data-price="7000">RS 7000</p>
         </div>
-
-        <!-- Product 4 -->
         <div class="card">
             <img src="images/shoes.png" class="product-img">
             <p class="stock">In Stock</p>
             <p class="stars">*****</p>
             <h3>Adidas</h3>
-            <p class="price">RS 6500</p>
+            <p class="price" data-price="6500">RS 6500</p>
         </div>
-
     </div>
-    
     <div class="row">
-
-        <!-- Product 5 -->
         <div class="card">
             <img src="images/battingpads.png" class="product-img">
             <p class="stock">In Stock</p>
             <p class="stars">*****</p>
             <h3>Addidas leg pads</h3>
-            <p class="price">RS 8400</p>
+            <p class="price" data-price="8400">RS 8400</p>
         </div>
-
-        <!-- Product 6 -->
         <div class="card">
             <img src="images/gloves.png" class="product-img">
             <p class="stock">In Stock</p>
             <p class="stars">*****</p>
             <h3>Batting gloves</h3>
-            <p class="price">RS 4000</p>
+            <p class="price" data-price="4000">RS 4000</p>
         </div>
     </div>
-    
     <div class="row">
-        <!-- Product 7 -->
         <div class="card">
             <img src="images/SS bat.png" class="product-img7">
             <p class="stock">In Stock</p>
             <p class="stars">*****</p>
             <h3>SS cricket bat</h3>
-            <p class="price">RS 28000</p>
+            <p class="price" data-price="28000">RS 28000</p>
         </div>
-
-        <!-- Product 8 -->
         <div class="card">
             <img src="images/bag.png" class="product-img">
             <p class="stock">In Stock</p>
             <p class="stars">*****</p>
             <h3>Heritage full kit</h3>
-            <p class="price">RS 45000</p>
+            <p class="price" data-price="45000">RS 45000</p>
         </div>
-
     </div>
 
+</div>
+
+
+
+    
 
 <!-- Footer Section -->
 <footer class="footer">
@@ -121,7 +139,7 @@
             <a href="index.html">Home</a>
             <a href="index3.html">Products</a>
             <a href="index8.html">About</a>
-            <a href="index9.html">Contact Us</a>
+            <a href="index7.html">Contact Us</a>
             <a href="">Privacy Policy</a>
             <a href="">Terms of Use</a>
         </div>
@@ -142,17 +160,57 @@
 
     </div>
 </footer>
+
 <script>
-    document.querySelector(".cart").addEventListener("click", function () 
-    {
-        window.location.href = "index5.html"; 
+    const sortTitle = document.querySelector(".sort-title");
+    const sortDropdown = document.querySelector(".sort-dropdown");
+    const container = document.getElementById("product-container");
+
+    // Open / close dropdown
+    sortTitle.addEventListener("click", () => {
+        sortDropdown.classList.toggle("show-sort");
     });
-</script>
-<script>
-    document.querySelector(".product-img7").addEventListener("click", function () 
-    {
-        window.location.href = "index4.html"; 
+
+    // Close when clicking outside
+    document.addEventListener("click", (e) => {
+        if (!document.querySelector(".sort-container").contains(e.target)) {
+            sortDropdown.classList.remove("show-sort");
+        }
     });
+
+    // Sort options
+    document.querySelector(".sort-item.high").addEventListener("click", () => {
+        sortProducts("high");
+        sortDropdown.classList.remove("show-sort");
+    });
+
+    document.querySelector(".sort-item.low").addEventListener("click", () => {
+        sortProducts("low");
+        sortDropdown.classList.remove("show-sort");
+    });
+
+    function sortProducts(type) {
+        let cards = Array.from(container.querySelectorAll(".card"));
+
+        cards.sort((a, b) => {
+            let priceA = parseInt(a.querySelector(".price").dataset.price);
+            let priceB = parseInt(b.querySelector(".price").dataset.price);
+            return type === "high" ? priceB - priceA : priceA - priceB;
+        });
+
+        container.innerHTML = "";
+        
+        for (let i = 0; i < cards.length; i += 2) {
+            let row = document.createElement("div");
+            row.className = "row";
+            row.appendChild(cards[i]);
+            if (cards[i + 1]) row.appendChild(cards[i + 1]);
+            container.appendChild(row);
+        }
+    }
 </script>
+
+
+
 </body>
 </html>

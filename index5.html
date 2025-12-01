@@ -12,12 +12,23 @@
     <img src="images/logo.png" class="cart-logo" alt="Cart Icon">
     <div class="logo">GoCrick</div>
     <a href="index.html">Home</a>
-    <a href="index3.html">Products</a>
-    <a href="index8.html">About</a>
-    <a href="index9.html">Contact Us</a>
+    <div class="dropdown">
+        <button class="dropbtn">
+           <a href="index3.html">Products</a> <a class="arrow">v</a>
+        </button>
+
+        <div class="dropdown-content">
+            <div class="item">Bats <a class="arrow">v</a></div>
+            <div class="item">Balls <a class="arrow">v</a></div>
+            <div class="item">Apparels <a class="arrow">v</a></div>
+            <div class="item">Training Kits <a class="arrow">v</a></div>
+            <div class="item">Accessories <a class="arrow">v</a></div>
+        </div>
+    </div>
+    <a href="index6.html">About</a>
+    <a href="index7.html">Contact Us</a>
     <a href="index2.html" class="login-btn">Log In</a>
     <img src="images/cart.png" class="cart" alt="Cart Icon">
-
 </div>
 
 <main class="cart-container">
@@ -40,7 +51,7 @@
                         <img src="images/bat.png" alt="CA Bat" class="product-image">
                         <div class="product-details">
                             <div class="product-name">CA Bat</div>
-                            <button class="remove-btn">X Remove</button>
+                            <button onclick="Remove()">XRemove</button>
                         </div>
                     </div>
                     <div class="col-quantity">
@@ -59,7 +70,7 @@
                         <img src="images/bag.png" alt="Heritage Full kit" class="product-image">
                         <div class="product-details">
                             <div class="product-name">Heritage Full kit</div>
-                            <button class="remove-btn">X Remove</button>
+                            <button onclick="Remove()">XRemove</button>
                         </div>
                     </div>
                     <div class="col-quantity">
@@ -78,7 +89,7 @@
                         <img src="images/ball.png" alt="Red Ball" class="product-image ball-image">
                         <div class="product-details">
                             <div class="product-name">Red Ball</div>
-                            <button class="remove-btn">X Remove</button>
+                            <button onclick="Remove()">XRemove</button>
                         </div>
                     </div>
                     <div class="col-quantity">
@@ -127,7 +138,7 @@
             <a href="index.html">Home</a>
             <a href="index3.html">Products</a>
             <a href="index8.html">About</a>
-            <a href="index9.html">Contact Us</a>
+            <a href="index7.html">Contact Us</a>
             <a href="">Privacy Policy</a>
             <a href="">Terms of Use</a>
         </div>
@@ -153,6 +164,13 @@
     {
         window.location.href = "index5.html"; 
     });
-</script>    
+    
+</script> 
+<script>
+  function Remove() {
+    console.log("Are you sure you want to remove this item from your cart?");
+    window.alert("Are you sure you want to remove this item from your cart?");
+  }
+</script>
 </body>
 </html>
