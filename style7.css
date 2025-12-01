@@ -1,0 +1,192 @@
+body 
+{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar 
+{
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar .logo 
+{
+    color: #00aaff;
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 30px;
+    margin-left: 5px;
+}
+
+.navbar a 
+{
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.login-btn 
+{
+    background: #00aaff;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 15px;
+    margin-left: auto;
+}
+
+.cart
+{
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    margin-left: 15px;
+}
+
+.cart-logo
+{
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    margin-left: 15px;
+}
+/* CONTACT TITLE */
+.contact-title {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.contact-title {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* CONTACT INFO BOXES */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.info-box i {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.info-box h4 {
+    margin: 8px 0 4px;
+    font-size: 18px;
+}
+
+.info-box p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* FORM + MAP SIDE BY SIDE */
+.form-map-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contact-form button {
+    width: 150px;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.map img {
+    width: 420px;
+    height: 290px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* FAQ SECTION */
+.faq-title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/* FAQ GRID EXACT LIKE SCREENSHOT */
+.faq-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    width: 80%;
+    margin: 30px auto;
+}
+
+.faq-box {
+    background: #fff;
+    padding: 18px 20px;
+    border-radius: 12px;
+    box-shadow: 0px 3px 12px rgba(0,0,0,0.1);
+}
+
+.faq-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.faq-heading i {
+    font-size: 16px;
+    color: #00c060;
+}
+
+.faq-box p {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.faq-box:first-child {
+    border-left: 4px solid #00c060;
+}
+
+.faq-box:not(:first-child) i {
+    color: #333;
+}
