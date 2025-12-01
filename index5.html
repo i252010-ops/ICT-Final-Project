@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoCrick</title>
+    <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+<!-- Navigation Bar -->
+<div class="navbar">
+    <img src="images/logo.png" class="cart-logo" alt="Cart Icon">
+    <div class="logo">GoCrick</div>
+    <a href="index.html">Home</a>
+    <a href="index3.html">Products</a>
+    <a href="index8.html">About</a>
+    <a href="index9.html">Contact Us</a>
+    <a href="index2.html" class="login-btn">Log In</a>
+    <img src="images/cart.png" class="cart" alt="Cart Icon">
+
+</div>
+
+<main class="cart-container">
+        <div class="cart-actions">
+            <button class="continue-shopping">Continue Shoping</button>
+            <button class="save-for-later">Save for later</button>
+        </div>
+
+        <div class="cart-content">
+            <div class="product-list">
+                <div class="list-header">
+                    <p class="col-product">Product</p>
+                    <p class="col-quantity">Quantity</p>
+                    <p class="col-price">Price</p>
+                    <p class="col-subtotal">Subtotal</p>
+                </div>
+                
+                <div class="cart-item">
+                    <div class="product-info col-product">
+                        <img src="images/bat.png" alt="CA Bat" class="product-image">
+                        <div class="product-details">
+                            <div class="product-name">CA Bat</div>
+                            <button class="remove-btn">X Remove</button>
+                        </div>
+                    </div>
+                    <div class="col-quantity">
+                        <div class="quantity-input">
+                            <button class="qty-btn">-</button>
+                            <input type="text" value="2" readonly>
+                            <button class="qty-btn">+</button>
+                        </div>
+                    </div>
+                    <div class="col-price">Rs6000.00</div>
+                    <div class="col-subtotal product-subtotal">Rs12000.00</div>
+                </div>
+
+                <div class="cart-item">
+                    <div class="product-info col-product">
+                        <img src="images/bag.png" alt="Heritage Full kit" class="product-image">
+                        <div class="product-details">
+                            <div class="product-name">Heritage Full kit</div>
+                            <button class="remove-btn">X Remove</button>
+                        </div>
+                    </div>
+                    <div class="col-quantity">
+                        <div class="quantity-input">
+                            <button class="qty-btn">-</button>
+                            <input type="text" value="2" readonly>
+                            <button class="qty-btn">+</button>
+                        </div>
+                    </div>
+                    <div class="col-price">Rs45000.00</div>
+                    <div class="col-subtotal product-subtotal">Rs90000.00</div>
+                </div>
+
+                <div class="cart-item">
+                    <div class="product-info col-product">
+                        <img src="images/ball.png" alt="Red Ball" class="product-image ball-image">
+                        <div class="product-details">
+                            <div class="product-name">Red Ball</div>
+                            <button class="remove-btn">X Remove</button>
+                        </div>
+                    </div>
+                    <div class="col-quantity">
+                        <div class="quantity-input">
+                            <button class="qty-btn">-</button>
+                            <input type="text" value="2" readonly>
+                            <button class="qty-btn">+</button>
+                        </div>
+                    </div>
+                    <div class="col-price">Rs5000.00</div>
+                    <div class="col-subtotal product-subtotal">Rs10000.00</div>
+                </div>
+
+            </div>
+            
+            <div class="cart-summary">
+                <h3>Cart summary</h3>
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <span class="amount">Rs112000.00</span>
+                </div>
+                <div class="summary-line">
+                    <span>Tax</span>
+                    <span class="amount">Rs1000.00</span>
+                </div>
+                <div class="summary-line total">
+                    <span>Total</span>
+                    <span class="amount">Rs130000.00</span>
+                </div>
+                <button class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </main>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h3>Gift & Decoration Store</h3>
+            <p>Copyright © 2023 All rights reserved</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Links</h3>
+            <a href="index.html">Home</a>
+            <a href="index3.html">Products</a>
+            <a href="index8.html">About</a>
+            <a href="index9.html">Contact Us</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Terms of Use</a>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact Info</h3>
+            <p>92+1234567</p>
+            <p>company@gmail.com</p>
+            <p>Address 12345678</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <img src="images/insta.png" alt="Instagram">
+            <img src="images/facebook.png" alt="Facebook">
+            <img src="images/youtube.png" alt="YouTube">
+        </div>
+
+    </div>
+</footer>
+<script>
+    document.querySelector(".cart").addEventListener("click", function () 
+    {
+        window.location.href = "index5.html"; 
+    });
+</script>    
+</body>
+</html>
